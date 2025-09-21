@@ -76,5 +76,20 @@ System testbench running the MicroPython demo on the simulated SoC; waveform cap
 
 Post‑PAR/cell placement reports: timing at target clock, area, congestion snapshots; include configuration and exact tool commits.
 
+# Literature Survey
 [DUAL: Acceleration of Clustering Algorithms using
 Digital-based Processing In-Memory](url)
+[On the E iciency of K-Means Clustering: Evaluation,
+Optimization, and Algorithm Selection](url)
+[TiAcc: Triangle-inequality based Hardware
+Accelerator for K-means on FPGAs](url)
+
+# Conclusion
+The proposed MicroWatt‑KMeans SoC delivers a compact, educational, and practically useful open‑silicon design by offloading the dominant K‑means kernels—distance, argmin, and centroid accumulation—into a fixed‑point accelerator tightly coupled to the MicroWatt CPU and a scratchpad SRAM, enabling reproducible demos with MicroPython and a clean RTL‑to‑GDS flow aligned with the hackathon’s criteria.
+
+The architecture targets the true bottlenecks with a bandwidth‑aware design: DMA‑lite stages batches into on‑chip SRAM, the accelerator streams compute, and the CPU performs lightweight normalization and control, balancing speed and feasibility for fabrication timelines.
+
+The deliverables—modular VHDL‑2008 RTL, thorough testbenches, post‑place analysis, Dockerized build scripts, and a MicroPython demonstration—directly map to the judging pillars of documentation, code quality, verification coverage, and technical merit.
+
+By adhering to recommended flows (GHDL+Yosys conversion, LibreLane/OpenLane hardening, and reuse of prior MicroWatt ASIC references) and showcasing optional custom POWER instructions, the project credibly advances the open hardware ecosystem while remaining achievable within the schedule.
+
