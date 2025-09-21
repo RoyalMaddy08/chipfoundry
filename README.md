@@ -65,10 +65,6 @@ Accelerator: 16‑bit fixed‑point datapaths; vector distance unit, tree argmin
 
 Memory: Scratchpad SRAM banks for samples/centroids/temp using available SRAM IP; DMA‑lite engine for burst copies.
 
-# MicroPython scripts allocate buffers, program CSRs, and compare against pure‑Python baseline to report speedup; runs on GHDL sim for quick checks.
-
-Optional inline assembly or intrinsics for custom opcodes to minimize MMIO overhead in hot loops.
-
 # Verification strategy
 Unit testbenches (GHDL) for each primitive: distance MAC correctness, argmin accuracy, centroid updates with fixed‑point rounding.
 
@@ -79,8 +75,10 @@ Post‑PAR/cell placement reports: timing at target clock, area, congestion snap
 # Literature Survey
 [DUAL: Acceleration of Clustering Algorithms using
 Digital-based Processing In-Memory](url)
+
 [On the E iciency of K-Means Clustering: Evaluation,
 Optimization, and Algorithm Selection](url)
+
 [TiAcc: Triangle-inequality based Hardware
 Accelerator for K-means on FPGAs](url)
 
