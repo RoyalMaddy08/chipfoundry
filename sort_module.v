@@ -1,7 +1,7 @@
 // =============================================================================
 // Sort Module: K-Best Selector with Distance Comparison
 // =============================================================================
-module knn_sort #(
+module knn_sort (
     parameter K = 5,
     parameter NUM_SAMPLES = 100,
     parameter DISTANCE_WIDTH = 32,
